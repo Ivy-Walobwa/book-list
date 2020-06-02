@@ -1,17 +1,4 @@
-class Book{
-
-
-    constructor(
-        readonly title: string,
-        private author: string,
-        public genre: string,
-        public pages: number,
-    ) {}
-
-    format() {
-        return `${this.title} by ${this.author}, ${this.genre} book of ${this.pages} pages`
-    }
-}
+import {Book} from './modules/book.js'
 
 const Book1 = new Book('Intelligent Investor', 'Benjamin', 'self-help', 721);
 console.log(Book1);
