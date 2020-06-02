@@ -1,4 +1,5 @@
-export class Book{
+import{HasFormatter} from '../interfaces/HasFormatter'
+export class Book implements HasFormatter{
     constructor(
         readonly title: string,
         private author: string,
