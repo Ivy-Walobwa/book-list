@@ -16,7 +16,11 @@ const list = new ListTemplate(ul);
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
+    // tupples
+    let values: [string, string, string, number]
+    values = [title.value, author.value, genre.value, pages.valueAsNumber]
+
     let doc: HasFormatter;
-    doc = new Book(title.value, author.value, genre.value, pages.valueAsNumber)
+    doc = new Book(...values)
     list.render(doc, title.value, 'end');
 })
